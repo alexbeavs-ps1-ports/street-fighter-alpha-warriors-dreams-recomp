@@ -1,0 +1,98 @@
+{
+  "format_version": 1,
+  "id": "street-fighter-alpha-warriors-dreams-psx",
+  "name": "Street Fighter Alpha - Warriors' Dreams",
+  "kind": "recomp",
+  "platform": "psx",
+  "source_repo": "street-fighter-alpha-warriors-dreams-recomp",
+  "rom_identity": {
+    "crc32": [
+      "0e309bd0"
+    ],
+    "md5": [
+      "6b81a4710e0390ee962ba73dcc16031f"
+    ],
+    "sha1": [
+      "3f8907afdeca48006a7a26bf97c2950f7590a66f"
+    ],
+    "disc_serials": [
+      "SLUS-00197"
+    ],
+    "sizes": [
+      32123616
+    ],
+    "filenames": [
+      "Street Fighter Alpha - Warriors' Dreams (USA).cue",
+      "Street Fighter Alpha - Warriors' Dreams (USA) (Track 1).bin"
+    ],
+    "track_counts": [
+      51
+    ],
+    "disc_fps": [
+      "5621d31d6d6ac042a11e207b459786c10d16a288175c67fbc5a4cc4b0c0b3c72"
+    ],
+    "require_cue": true
+  },
+  "rom_extensions": [
+    ".cue",
+    ".bin",
+    ".chd"
+  ],
+  "bios_identity": {
+    "required": true,
+    "name": "SCPH1001.BIN",
+    "profile": "SCPH1001",
+    "crc32": [
+      "37157331"
+    ],
+    "md5": [
+      "924e392ed05558ffdb115408c263dccf"
+    ],
+    "sha1": [
+      "10155d8d6e6e832d6ea66db9bc098321fb5e8ebf"
+    ],
+    "sha256": [
+      "71af94d1e47a68c11e8fdb9f8368040601514a42a5a399cda48c7d3bff1e99d3"
+    ],
+    "sizes": [
+      524288
+    ],
+    "filenames": [
+      "SCPH1001.BIN"
+    ]
+  },
+  "release": {
+    "github": "alexbeavs-ps1-ports/street-fighter-alpha-warriors-dreams-recomp",
+    "allow_prerelease": false,
+    "asset_glob": {
+      "windows-x64": "street-fighter-alpha-warriors-dreams-*-windows-x64.zip",
+      "linux-x64": "street-fighter-alpha-warriors-dreams-*-linux-x64.zip",
+      "macos-arm64": "street-fighter-alpha-warriors-dreams-*-macos-arm64.zip",
+      "macos-x64": "street-fighter-alpha-warriors-dreams-*-macos-x64.zip"
+    }
+  },
+  "launch": {
+    "windows": "street_fighter_alpha_warriors_dreams.exe",
+    "linux": "street_fighter_alpha_warriors_dreams",
+    "macos": "street_fighter_alpha_warriors_dreams"
+  },
+  "build": {
+    "source": {
+      "github": "alexbeavs-ps1-ports/street-fighter-alpha-warriors-dreams-recomp",
+      "ref": ""
+    },
+    "toolchain": {
+      "id": "cmake-clang-v1",
+      "min_version": "1.0.14"
+    },
+    "generate": {
+      "engine": "psxrecomp",
+      "config": "game.toml"
+    },
+    "cmake": {
+      "build_dir": "build",
+      "target": "psx-runtime",
+      "config": "Release"
+    }
+  }
+}
